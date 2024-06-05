@@ -1,0 +1,24 @@
+@media (min-width: 1440px) {
+    .container {
+        grid-template-areas:
+            "grid1 grid1 grid2 grid5"
+            "grid3 grid4 grid4 grid5";
+        column-gap: 2.5rem;
+    }
+
+    .container .grid1 {
+        grid-area: grid1;
+    }
+    .container .grid2 {
+        grid-area: grid2;
+    }
+    .container .grid3 {
+        grid-area: grid3;
+    }
+    .container .grid4 {
+        grid-area: grid4;
+    }
+    .container .grid5 {
+        grid-area: grid5;
+    }
+}

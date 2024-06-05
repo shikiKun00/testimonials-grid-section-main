@@ -1,8 +1,88 @@
 * {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  background: transparent;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+img {
+    display: inline-block;
+    width: 100%;
+}
+
+:root {
+    --gray: gray;
+    --light-gray: hsl(210, 46%, 95%);
+    --pure-white: hsl(0, 0%, 100%);
+    background-color: hsl(210, 46%, 95%);
+}
+
+.container {
+    display: grid;
+    row-gap: 3rem;
+    padding: 1.2rem 2rem;
+}
+
+.container section {
+    display: grid;
+    row-gap: 20px;
+    grid-template-areas:
+        "img info info"
+        "h2 h2 h2"
+        "paragraph paragraph paragraph";
+    padding: 1rem 1.1rem;
+    border-radius: 1rem;
+}
+
+.container section img {
+    grid-area: img;
+    width: 35%;
+    border-radius: 100%;
+}
+
+.container section .information {
+    grid-area: info;
+    transform: translateX(-45px);
+}
+
+.container section .information h4 {
+    color: var(--light-gray);
+}
+
+.container section h2 {
+    grid-area: h2;
+}
+
+html .container section p {
+    grid-area: paragraph;
+    color: var(--light-gray);
+}
+
+.container .grid1 {
+    color: var(--pure-white);
+    background-color: hsl(263, 55%, 52%);
+}
+.container .grid2 {
+    background-color: hsl(217, 19%, 35%);
+    color: var(--pure-white);
+}
+.container .grid3 {
+    background-color: var(--pure-white);
+}
+
+.container .grid3 .information h4,
+.container .grid3 p,
+.container .grid5 .information h4,
+.container .grid5 p {
+    color: var(--gray);
+}
+
+.container .grid4 {
+    background-color: hsl(219, 29%, 14%);
+    color: var(--pure-white);
+}
+.container .grid5 {
+    background-color: var(--pure-white);
 }
